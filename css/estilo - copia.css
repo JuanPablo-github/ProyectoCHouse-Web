@@ -1,0 +1,551 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img, .user-icon img {
+    width: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* ------------------ SECCIÓN HOME ---------------------------------------------*/
+.Home {
+    background-image: url('/Banners/banner_Home.png');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.Historial {
+    background-image: url('/Banners/banner_historial.png');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+}
+
+.hero-text p {
+    font-size: 24px;
+}
+
+/* Mis mascotas */
+.mis-mascotas {
+    background-color: #d87352;
+    text-align: center;
+    padding: 40px;
+}
+
+.mascotas-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.mascota img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.mascota p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+/* Próximas fechas */
+.proximas-fechas {
+    background-color: #5a9fd1;
+    padding: 40px;
+    text-align: center;
+}
+
+.fechas-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.fechas-lista li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.fechas-lista img {
+    width: 40px;
+    margin-right: 20px;
+}
+
+.fechas-lista p {
+    font-size: 18px;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 50px;
+}
+
+/* ---------------------------- SECCION REGISTRO ---------------------------*/
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img, .user-icon img {
+    width: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* REGISTRO  */
+.Registro {
+    background-image: url('/Banners/banner_Registro.png');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+}
+
+/* Formulario */
+.formulario {
+    background-color: #d87352;
+    padding: 40px;
+    text-align: center;
+}
+
+.formulario h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"] {
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+.btn-agregar {
+    background-color: #e1704b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-agregar:hover {
+    background-color: #c15d39;
+}
+
+/* Observaciones */
+.observaciones {
+    background-color: #5a9fd1;
+    padding: 40px;
+    text-align: center;
+}
+
+.observaciones h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.observaciones .form-group textarea {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 50px;
+}
+
+/* ------------------- SECCION CONTROLES -------------------------------------------------------------- */
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img, .user-icon img {
+    width: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Controles  */
+.Controles {
+    background-image: url('/Banners/banner_conejo.png');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+}
+
+/* Registro de controles */
+.registro-controles {
+    background-color: #d87352;
+    padding: 40px;
+    text-align: center;
+}
+
+.registro-controles h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.registro-controles ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    color: white;
+    font-size: 18px;
+}
+
+.registro-controles li {
+    margin-bottom: 10px;
+}
+
+/* Clínicas veterinarias */
+.clinicas {
+    background-color: #5a9fd1;
+    padding: 40px;
+    text-align: center;
+}
+
+.clinicas h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.clinicas-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.clinica {
+    text-align: center;
+}
+
+.clinica img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.clinica p {
+    color: white;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 50px;
+}
+
+/*---------------------------- SECCION contacto --------------------------------------- */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.header img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.header nav {
+    flex: 1;
+    text-align: center;
+}
+
+.header nav a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.header .user-icon {
+    font-size: 20px;
+}
+
+
+
+.bannerContacto {
+    background-image: url('/Banners/banner_contacto.png');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+
+.banner h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    background-color: #d5734c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-form-section h2 {
+    margin: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #d5734c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Team Section */
+.team-section {
+    background-color: #4a89cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.team-section h2 {
+    margin: 0;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.team-member {
+    margin: 0 15px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.team-member p {
+    margin: 5px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer img {
+    width: 40px;
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title> MascotApps</title>
+</head>
+
+<body>
+    <Header>
+        <img src="./Iconos/ico_web.png" alt="logoWeb">
+        <nav>
+    <button>Home</button>
+    <button>Registro</button>
+    <button>Controles</button>
+    <button>Historial</button>
+    <button>Contacto</button>
+        </nav>
+
+    <div class="bannerHome">
+        <img src="./Banners/banner_Home.png" alt="imgHome">
+        <div class="tituloBanner">
+            <h1>
+                Bienvenidos a MascotApps
+            </h1>
+        </div> 
+    </div>
+</Header>
+<main>
+
+    <h2>Mis mascotas</h2>
+        
+    <div class="contenedor-imagenes">
+        <div class="imagen-item">
+            <img src="./ImagesMascotas/Gato.png" alt="gato">
+            <p>Gato</p>
+        </div>
+        <div class="imagen-item">
+            <img src="./ImagesMascotas/Perro.png" alt="Imagen 2">
+            <p>Perro</p>
+        </div>
+        <div class="imagen-item">
+            <img src="./ImagesMascotas/Conejo.png" alt="Imagen 3">
+            <p>Conejo</p>
+        </div>
+    </div>
+
+    <h2>Proximas fechas</h2>
+
+<ul>
+    <li>Blanquito : Vacuna triple felina en DiagnoPet (Melipilla, el 07 de octubre 2024.)</li>
+    <li>Mango : Ecografia en Clinica DiagnoPet (Melipilla), el 14 de octubre 2024</li>
+    <li>Canela : Examen de sangre en Clinica Triviño, la primera semana de febrero 2025.</li>
+</ul>
+
+    
+
+</main>
+<footer>
+<img src="./Iconos/ico_web.png" alt="logoPie">
+<h3>Pie de pagina</h3>
+</footer>
+
+</body>
+
+</html>
+
+C:\Users\Desarrollo FullPyme\Documents\Coder house\PreEntrega1+PichunFuentes\Banners\banner_Home.png
