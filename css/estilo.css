@@ -1,499 +1,403 @@
-/* Reseteo básico */
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Estilos globales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Encabezado */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header .logo img, header .user-icon img {
+  width: 50px;
 }
 
-header .logo img,
-.user-icon img {
-    
-    width: 50px;
+.menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.menu ul li {
+  margin: 0 10px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-
-/* Banner Secciones */
 .bannerHome {
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
+  position: relative;
+  background-image: url("../Banners/banner_Home.png");
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+.bannerHome h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.bannerHome p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.bannerHome .imgHome {
+  display: none;
 }
 
-.bannerRegistro , .bannerControles, .bannerHistorial, .bannerContacto{
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
+.mis-mascotas {
+  background-color: #d87352;
+  text-align: center;
+  padding: 40px;
+}
+.mis-mascotas .mascotas-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.mis-mascotas .mascotas-grid .mascota img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
-.banner h1 {
-    font-size: 3em;
-    margin: 0;
+.proximas-fechas {
+  background-color: #5a9fd1;
+  padding: 40px;
+  text-align: center;
+}
+.proximas-fechas .fechas-lista {
+  list-style: none;
+}
+.proximas-fechas .fechas-lista li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.proximas-fechas .fechas-lista li img {
+  width: 40px;
+  margin-right: 20px;
+}
+.proximas-fechas .fechas-lista li p {
+  font-size: 18px;
+  color: white;
 }
 
-/* Home y Secciones  revision 11052024*/
-
-.bannerHome{
-    background-image: url('../Banners/banner_Home.png');
+.footer-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.footer-logo img {
+  width: 50px;
 }
 
 .bannerRegistro {
-    background-image: url('../Banners/banner_Registro.png');
+  position: relative;
+  background-image: url("../ImagesMascotas/perro4.png");
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  padding: 20px;
+  color: white;
+  text-align: left;
 }
-
-.bannerControles {
-    background-image: url('../Banners/banner_conejo.png');
+.bannerRegistro h1 {
+  font-size: 2rem;
+  margin: 0px;
 }
-
-.bannerHistorial {
-    background-image: url('../Banners/banner_historial.png');
+.bannerRegistro p {
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
-
-.bannerContacto {
-    background-image: url('../Banners/banner_contacto.png');
+.bannerRegistro .imgHome {
+  display: none;
 }
-
-/* Texto en Hero */
-.hero-text h1 {
-    font-size: 48px;
-}
-
-.hero-text p {
-    font-size: 24px;
-}
-
-/* Sección Mis Mascotas */
-.mis-mascotas {
-    background-color: #d87352;
-    text-align: center;
-    padding: 40px;
-}
-
-.mascotas-grid {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.mascota img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.mascota p {
-    margin-top: 10px;
-    font-size: 18px;
-    color: white;
-}
-
-/* Sección Próximas Fechas */
-.proximas-fechas {
-    background-color: #5a9fd1;
-    padding: 40px;
-    text-align: center;
-}
-
-.fechas-lista {
-    list-style: none;
-    padding: 0;
-}
-
-.fechas-lista li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.fechas-lista img {
-    width: 40px;
-    margin-right: 20px;
-}
-
-.fechas-lista p {
-    font-size: 18px;
-    color: white;
-    text-align: center;
-}
-
-/* -- Registro -- */
-
-/* ---------  Formulario mascota -----------------------------*/
 
 .formularioMascota {
-    background-color: #d87352;
-    text-align: center;
-    padding: 40px;
+  background-color: #d87352;
+  text-align: center;
+  padding: 40px;
 }
-
-
-.formularioMascota h2 {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
+.formularioMascota .formularioMascota h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
-
-.form-group {
-    margin-bottom: 20px;
+.formularioMascota .form-group {
+  margin-bottom: 20px;
 }
-
-
-.form-group label {
-    display: block;
-    color: white;
-    margin-bottom: 5px;
-    font-size: 16px;
+.formularioMascota .form-group label {
+  display: block;
+  color: white;
+  margin-bottom: 5px;
+  font-size: 16px;
 }
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
+.formularioMascota .form-group input, .formularioMascota .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
 }
-
-.form-group input[type="text"],
-.form-group input[type="number"],
-.form-group input[type="date"] {
-    width: 300px;
-    margin: 0 auto;
-    display: block;
+.formularioMascota .form-group input[type=text],
+.formularioMascota .form-group input[type=number],
+.formularioMascota .form-group input[type=date] {
+  width: 300px;
+  margin: 0 auto;
+  display: block;
 }
-
-.btn-agregar {
-    background-color: #5a9fd1;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+.formularioMascota .btn-agregar {
+  background-color: #5a9fd1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
-
-.btn-agregar:hover {
-    background-color: #e1704b;
-    border: dashed;
+.formularioMascota .btn-agregar:hover {
+  background-color: #e1704b;
+  border: dashed;
 }
-
-/*--------------------- FIN Formulario mascota */
-
-/*--------------------- INICIO Observacion y detalles Mascota --------------------- */
 
 .observaciones {
-    background-color: #5a9fd1;
-    padding: 40px;
-    text-align: center;
+  background-color: #5a9fd1;
+  padding: 40px;
+  text-align: center;
 }
 
 .observaciones h2 {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .observaciones .form-group textarea {
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-    display: block;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
 }
 
 .btn-agregarDetalle {
-    background-color: #e1704b;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+  background-color: #e1704b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .btn-agregarDetalle:hover {
-    background-color: #5a9fd1;
-    border: dashed;
+  background-color: #5a9fd1;
+  border: dashed;
 }
 
-/*--------------------- FIN REGISTRO / Observacion y detalles Mascota --------------------- */
-
-/*--------------------- INICIO CONTROLES / Registro de controles --------------------- */
-
-/* SECCION Registro de controles */
+.bannerControles {
+  position: relative;
+  background-image: url("../Banners/banner_conejo.png");
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+.bannerControles h1 {
+  font-size: 2rem;
+  margin: 0px;
+}
+.bannerControles p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.bannerControles .imgHome {
+  display: none;
+}
 
 .registro-controles {
-    background-color: #d87352;
-    padding: 40px;
-    text-align: center;
+  background-color: #d87352;
+  padding: 40px;
+  text-align: center;
 }
 
 .registro-controles h2 {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .registro-controles ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    color: white;
-    font-size: 18px;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  color: white;
+  font-size: 18px;
 }
 
 .registro-controles li {
-    margin-bottom: 10px;
-} 
-
-/* SECCION Clinicas veterinarias*/
+  margin-bottom: 10px;
+}
 
 .clinicas {
-    background-color: #5a9fd1;
-    padding: 40px;
-    text-align: center;
+  background-color: #5a9fd1;
+  padding: 40px;
+  text-align: center;
 }
 
 .clinicas h2 {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .clinicas-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 .clinica {
-    text-align: center;
+  text-align: center;
 }
 
 .clinica img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .clinica p {
-    color: white;
-    font-size: 18px;
+  color: white;
+  font-size: 18px;
 }
 
-
-
-.fechas-lista {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-
+.bannerHistorial {
+  position: relative;
+  background-image: url("../Banners/banner_historial.png");
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+.bannerHistorial h1 {
+  font-size: 2rem;
+  margin: 0px;
+}
+.bannerHistorial p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.bannerHistorial .imgHome {
+  display: none;
 }
 
-.fechas-lista li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+.bannerContacto {
+  position: relative;
+  background-image: url("../Banners/banner_contacto.png");
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+.bannerContacto h1 {
+  font-size: 2rem;
+  margin: 0px;
+}
+.bannerContacto p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.bannerContacto .imgHome {
+  display: none;
 }
 
-.fechas-lista img {
-    width: 40px;
-    margin-right: 20px;
-}
-
-.fechas-lista p {
-    font-size: 18px;
-    color: white;
-}
-
-/* Sección Formulario de Contacto */
 .contact-form-section {
-    background-color: #d5734c;
-    color: white;
-    text-align: center;
-    padding: 20px;
+  background-color: #d5734c;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .contact-form button {
-    background-color: #d5734c;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #d5734c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Sección Equipo */
 .team-section {
-    background-color: #4a89cc;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: #4a89cc;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 .team-members {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
 .team-member {
-    margin: 0 15px;
-    text-align: center;
+  margin: 0 15px;
+  text-align: center;
 }
 
 .team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-.team-member p {
-    margin: 5px 0;
-}
-
-/* Footer */
-.footer-logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.footer-logo img {
-    width: 50px;
-    align-items: center;
-    text-align: center;
-}
-
-.menu ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .menu ul li {
-    margin: 0 10px;
-  }
-
-  .menu a {
-    text-decoration: none;
-    color: #333;
-  }
-
-  .menu-toggle {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  /* Mascotas */
-  .mis-mascotas .mascotas-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas por defecto */
-    gap: 20px;
-    margin: 20px;
-  }
-
-  .mis-mascotas .mascota {
-    text-align: center;
-  }
-
-  .mis-mascotas .mascota img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
 
-  /* Media Queries */
-  @media (max-width: 768px) {
-    .menu ul {
-      display: none;
-      flex-direction: column;
-      background-color: #f8f8f8;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      padding: 10px;
-      border: 1px solid #ddd;
-    }
-
-    @media (max-width: 768px) {
-        .mis-mascotas .mascotas-grid {
-          grid-template-columns: 1fr; /* Una columna para pantallas pequeñas */
-        }
-
-    .menu ul.show {
-      display: flex;
-    }
-
-    .menu-toggle {
-      display: block;
-    }
-
-    .mis-mascotas {
-      grid-template-columns: 1fr;
-    }
+.team-member p {
+  margin: 5px 0;
 }
 
-
-}
+/*# sourceMappingURL=estilo.css.map */
