@@ -1,3 +1,4 @@
+// Usar  sass --watch scss:css para volver a vincular cambios con css
 // Reset y configuraciones globales
 * {
     margin: 0;
@@ -20,13 +21,46 @@
     align-items: $align;
     
   }
+
+  @mixin contenido_mixim($direction: row, $justify: center, $align: center) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  @mixin banner($image, $height: 300px, $color: white, $align: left) {
+    position: relative;
+    background-image: url($image);
+    background-size: cover;
+    background-position: center;
+    height: $height;
+    padding: 20px;
+    color: $color;
+    text-align: $align;
+
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+
+    .imgHome {
+        display: none; // Imagen oculta porque se usa como fondo
+    }
+  }
+
   
-// PAG-INDEX
+//CONFIGURACION HEADERS
 
   // Header
   header {
     @include flex-center(row, space-between, center);
-    padding: 20px;
+    padding: 10px;
     background-color: $header-bg;
     box-shadow: $box-shadow;
   
@@ -35,11 +69,13 @@
     }
   }
   
-  // Menú de navegación
+  
+// CONFIGURACION MENUS
   .menu {
     ul {
       @include flex-center;
       list-style: none;
+      padding-top: 10px;
   
       li {
         margin: 0 10px;
@@ -51,42 +87,102 @@
       }
     }
   }
-  
-  // Banner principal
-  .bannerHome {
-    position: relative;
-    background-image: url('../Banners/banner_Home.png');
-    background-size: cover;
-    background-position: center;
-    height: 350px;
+
+// CONFIGURACION DE BANNERS
+
+  .bannerHome 
+  {
+    @include banner('../Banners/banner_Home.png');
+  }
+
+  .bannerRegistro
+  {
+    @include banner('../ImagesMascotas/perro4.png') 
+  }
+
+  .bannerControles
+  {
+    @include banner('../Banners/banner_conejo.png')
+  }
+
+  .bannerHistorial
+  {
+    @include banner('../Banners/banner_historial.png')
+  }
+
+  .bannerContacto
+  {
+    @include banner('../Banners/banner_contacto.png')
+  }
+
+  .footer {
+    @include flex-center(column, center, center); /* Centrar contenido vertical y horizontal */
     padding: 20px;
-    color: white;
-    text-align: left;
+    background-color: #2d2d2d; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    text-align: center;
   
-    //@include flex-center(column, flex-start, center);
+    .footer-logo {
+      @include flex-center(row, space-between, center);
+      margin-bottom: 20px;
   
-    h1 {
-      font-size: 2rem;
-      margin: 0;
+      img {
+        width: 50px;
+      }
+
       
     }
   
-    p {
-      margin-top: 10px;
-      font-size: 1.2rem;
-    
+    .footer-resena {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      max-width: 800px;
     }
   
-    .imgHome {
-      display: none; // Imagen oculta porque se usa como fondo
+    .footer-rrss {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+  
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.5rem;
+  
+        &:hover {
+          color: #6ab0de; /* Color del hover */
+          transition: color 0.3s ease;
+        }
+      }
+  
+      .iconRSS{
+        display: flex;
+        justify-content: center;
+        align-items: cenleter;
+        width: 40px;
+        height: 40px;
+        background-color: #444444; /* Fondo gris oscuro */
+        border-radius: 50%; /* Forma circular */
+      }
+    }
+    
+  
+    .footer-creditos {
+      font-size: 0.875rem;
+      margin-top: 20px;
+      opacity: 0.8;
     }
   }
   
+
+  // CONFIGURACION DE CADA PAGINA
+
+  // HOME
   // Sección "Mis Mascotas"
   .mis-mascotas {
     background-color: $primary-color;
     text-align: center;
-    padding: 40px;
+    padding: 30px;
   
     .mascotas-grid {
       @include flex-center(row, space-around, center);
@@ -99,19 +195,22 @@
       }
     }
   }
-  
+
+  /*
   // Próximas fechas
   .proximas-fechas {
     background-color: $secondary-color;
-    padding: 40px;
+    padding: 30px;
     text-align: center;
   
     .fechas-lista {
       list-style: none;
+      padding-top: 20PX;
   
       li {
-        @include flex-center(row, flex-start, center);
+      @include contenido_mixim(row, space-between, center);
         margin-bottom: 20px;
+        text-align: center;
   
         img {
           width: 40px;
@@ -125,51 +224,64 @@
       }
     }
   }
-  
-  // Footer
-  .footer-logo {
-    @include flex-center(row, space-between, center);
-    padding: 20px;
-    background-color: $header-bg;
-    box-shadow: $box-shadow;
-  
-    img {
-      width: 50px;
-    }
+    */
+
+    .proximas-fechas {
+      background-color: #6ab0de; /* Fondo azul */
+      padding: 20px;
+      max-width: 1920px; /* Ancho máximo */
+      margin: auto;
+      font-family: Arial, sans-serif;
+      color: #000; /* Texto negro */
   }
-
-  // PAG-REGISTRO
-
-  .bannerRegistro {
-    position: relative;
-    background-image: url('../ImagesMascotas/perro4.png');
-    background-size: cover;
-    background-position: center;
-    height: 350px;
-    padding: 20px;
-    color: white;
-    text-align: left;
-    
   
-    //@include flex-center(column, flex-start, center);
-  
-    h1 {
-      font-size: 2rem;
-      margin: 0px;
-      
-    }
-  
-    p {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      
-    }
-  
-    .imgHome {
-      display: none; // Imagen oculta porque se usa como fondo
-    }
+  .proximas-fechas h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #000; /* Color del título */
   }
-
+  
+  .fechas-lista {
+      list-style: none; /* Quitar viñetas */
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px; /* Espacio entre elementos */
+      justify-content: center;
+     
+  }
+  
+  .fechas-lista li {
+      display: flex; /* Alineación horizontal de ícono y texto */
+      align-items: center; /* Alinear verticalmente los íconos con el texto */
+      gap: 10px; /* Espacio entre ícono y texto */
+      background: #fff; /* Fondo blanco */
+      padding: 10px;
+      border-radius: 5px; /* Bordes redondeados */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+      justify-content: center;
+  
+  }
+  
+  .icoMasc {
+      width: 40px;
+      height: 40px;
+      border: 2px solid orange; /* Bordes naranjas */
+      border-radius: 50%; /* Hacer los íconos circulares */
+      object-fit: cover; /* Ajustar imagen */
+  }
+  
+  .fechas-lista p {
+      margin: 0;
+      font-size: 1rem; /* Tamaño del texto */
+  }
+  
+  .fechas-lista strong {
+      color: #000; /* Color para resaltar los nombres */
+  }
+  
+ 
   .formularioMascota {
     background-color: #d87352;
     text-align: center;
@@ -262,35 +374,7 @@
 
     // CONTROLES
 
-    .bannerControles {
-        position: relative;
-        background-image: url('../Banners/banner_conejo.png');
-        background-size: cover;
-        background-position: center;
-        height: 350px;
-        padding: 20px;
-        color: white;
-        text-align: left;
-        
-      
-        //@include flex-center(column, flex-start, center);
-      
-        h1 {
-          font-size: 2rem;
-          margin: 0px;
-          
-        }
-      
-        p {
-          margin-top: 10px;
-          font-size: 1.2rem;
-          
-        }
-      
-        .imgHome {
-          display: none; // Imagen oculta porque se usa como fondo
-        }
-      }
+    
 
       .registro-controles {
         background-color: #d87352;
@@ -353,65 +437,51 @@
 
     // PAG-Historial
 
-    .bannerHistorial {
-        position: relative;
-        background-image: url('../Banners/banner_historial.png');
-        background-size: cover;
-        background-position: center;
-        height: 350px;
-        padding: 20px;
-        color: white;
-        text-align: left;
-        
-      
-        //@include flex-center(column, flex-start, center);
-      
-        h1 {
-          font-size: 2rem;
-          margin: 0px;
-          
-        }
-      
-        p {
-          margin-top: 10px;
-          font-size: 1.2rem;
-          
-        }
-      
-        .imgHome {
-          display: none; // Imagen oculta porque se usa como fondo
-        }
+    .mascotasHistorial {
+      padding: 20px;
+      background-color: $secondary-color;
+  
+      h2 {
+          text-align: center;
+          margin-bottom: 20px;
+          color: #333;
       }
-
-      .bannerContacto{
-        position: relative;
-        background-image: url('../Banners/banner_contacto.png');
-        background-size: cover;
-        background-position: center;
-        height: 350px;
-        padding: 20px;
-        color: white;
-        text-align: left;
-        
-      
-        //@include flex-center(column, flex-start, center);
-      
-        h1 {
-          font-size: 2rem;
-          margin: 0px;
-          
-        }
-      
-        p {
-          margin-top: 10px;
-          font-size: 1.2rem;
-          
-        }
-      
-        .imgHome {
-          display: none; // Imagen oculta porque se usa como fondo
-        }
+  
+      .mascotaHistorial {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          padding: 10px;
+          background: #ffffff;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+          img {
+              width: 120px;
+              height: 120px;
+              object-fit: cover;
+              border-radius: 50%;
+              margin-right: 20px;
+              border: 3px solid #ccc;
+          }
+  
+          .info {
+              h3 {
+                  margin: 0;
+                  color: #444;
+                  font-size: 1.5rem;
+              }
+  
+              p {
+                  margin: 5px 0 0;
+                  color: #666;
+                  font-size: 1rem;
+              }
+          }
       }
+  }
+  
+     
 
       .contact-form-section {
         background-color: #d5734c;
@@ -437,14 +507,26 @@
         border-radius: 5px;
     }
     
-    .contact-form button {
-        background-color: #d5734c;
-        color: white;
+    .contact-form-section button {
+        background-color: $secondary-color;
+        color: rgb(255, 255, 255);
         padding: 10px;
         border: none;
-        border-radius: 5px;
+        border-radius: 10px;
         cursor: pointer;
+        
     }
+
+    .formularioMascota button {
+      background-color: $secondary-color;
+      color: rgb(255, 255, 255);
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      width: px;
+      
+  }
     
     /* Sección Equipo */
     .team-section {
@@ -474,12 +556,4 @@
     .team-member p {
         margin: 5px 0;
     }
-    
-
-
-
-
-
-  
- 
   

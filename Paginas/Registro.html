@@ -36,6 +36,27 @@
 
 
     <!-- Sección de formulario -->
+    <section class="tipoMascota">
+                <section class="clinicas">
+            <h2>¿Quieres registrar una nueva mascota?</h2>
+            <div class="clinicas-container">
+                <div class="clinica">
+                    <img src="../Iconos/ico_addGato.png" alt="Clínica Veterinaria 1">
+                    <p>Agregar un gato</p>
+                </div>
+                <div class="clinica">
+                    <img src="../Iconos/ico_addPerro.png" alt="Clínica Veterinaria 2">
+                    <p>Agregar un perro</p>
+                </div>
+                <div class="clinica">
+                    <img src="../Iconos/ico_addMascotas.png" alt="Centro Veterinario 3">
+                    <p>Agrega otro tipo</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Sección Observaciones -->
     <section class="formularioMascota">
         <h2>Formulario</h2>
         <form action="#" method="POST">
@@ -59,28 +80,36 @@
                 <label for="fecha-nacimiento">Fecha de nacimiento</label>
                 <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
             </div>
+            <div>
+                <button type="button">Enviar</button>
+            </div>
            
         </form>
     </section>
 
-    <!-- Sección Observaciones -->
-    <section class="observaciones">
-        <h2>Observaciones, detalles y cuidados especiales</h2>
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="observaciones">Agrega cualquier detalle médico, alergias y cuidados</label>
-                <textarea id="observaciones" name="observaciones" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn-agregarDetalle">Agregar</button>
-        </form>
-    </section>
-
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="footer-logo">
-            <img src="../Iconos/ico_web.png" alt="Logo MascotAps">
+          <img src="../Iconos/ico_web.png " alt="Logo de la App">
         </div>
-    </footer>
+        <div class="footer-resena">
+          <p>
+            Nuestra aplicación tiene como objetivo mejorar la calidad de vida de tus mascotas,
+            facilitando el seguimiento de sus citas y cuidados médicos.
+          </p>
+        </div>
+        <div class="footer-rrss">
+          <a href="https://www.facebook.com" target="_blank" class="iconRRSS" aria-label="Facebook">
+            <img src="../Iconos/ico_facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="iconRRSS" aria-label="Instagram">
+            <img src="../Iconos/ico_instagram.png" alt="Instagram">
+          </a>
+        </div>
+        <div class="footer-creditos">
+          <p>© 2024 - Desarrollado por Como perros y gatos SPA</p>
+        </div>
+      </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

@@ -10,7 +10,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -24,6 +24,7 @@ header .logo img, header .user-icon img {
   justify-content: center;
   align-items: center;
   list-style: none;
+  padding-top: 10px;
 }
 .menu ul li {
   margin: 0 10px;
@@ -38,7 +39,7 @@ header .logo img, header .user-icon img {
   background-image: url("../Banners/banner_Home.png");
   background-size: cover;
   background-position: center;
-  height: 350px;
+  height: 300px;
   padding: 20px;
   color: white;
   text-align: left;
@@ -55,10 +56,153 @@ header .logo img, header .user-icon img {
   display: none;
 }
 
+.bannerRegistro {
+  position: relative;
+  background-image: url("../ImagesMascotas/perro4.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+.bannerRegistro h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.bannerRegistro p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.bannerRegistro .imgHome {
+  display: none;
+}
+
+.bannerControles {
+  position: relative;
+  background-image: url("../Banners/banner_conejo.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+.bannerControles h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.bannerControles p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.bannerControles .imgHome {
+  display: none;
+}
+
+.bannerHistorial {
+  position: relative;
+  background-image: url("../Banners/banner_historial.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+.bannerHistorial h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.bannerHistorial p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.bannerHistorial .imgHome {
+  display: none;
+}
+
+.bannerContacto {
+  position: relative;
+  background-image: url("../Banners/banner_contacto.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+.bannerContacto h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.bannerContacto p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.bannerContacto .imgHome {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Centrar contenido vertical y horizontal */
+  padding: 20px;
+  background-color: #2d2d2d; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  text-align: center;
+}
+.footer .footer-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.footer .footer-logo img {
+  width: 50px;
+}
+.footer .footer-resena {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+.footer .footer-rrss {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.footer .footer-rrss a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.footer .footer-rrss a:hover {
+  color: #6ab0de; /* Color del hover */
+  transition: color 0.3s ease;
+}
+.footer .footer-rrss .iconRSS {
+  display: flex;
+  justify-content: center;
+  align-items: cenleter;
+  width: 40px;
+  height: 40px;
+  background-color: #444444; /* Fondo gris oscuro */
+  border-radius: 50%; /* Forma circular */
+}
+.footer .footer-creditos {
+  font-size: 0.875rem;
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
 .mis-mascotas {
   background-color: #d87352;
   text-align: center;
-  padding: 40px;
+  padding: 30px;
 }
 .mis-mascotas .mascotas-grid {
   display: flex;
@@ -73,63 +217,86 @@ header .logo img, header .user-icon img {
   border-radius: 50%;
 }
 
+/*
+// Próximas fechas
 .proximas-fechas {
-  background-color: #5a9fd1;
-  padding: 40px;
+  background-color: $secondary-color;
+  padding: 30px;
   text-align: center;
+
+  .fechas-lista {
+    list-style: none;
+    padding-top: 20PX;
+
+    li {
+    @include contenido_mixim(row, space-between, center);
+      margin-bottom: 20px;
+      text-align: center;
+
+      img {
+        width: 40px;
+        margin-right: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        color: white;
+      }
+    }
+  }
 }
-.proximas-fechas .fechas-lista {
-  list-style: none;
+  */
+.proximas-fechas {
+  background-color: #6ab0de; /* Fondo azul */
+  padding: 20px;
+  max-width: 1920px; /* Ancho máximo */
+  margin: auto;
+  font-family: Arial, sans-serif;
+  color: #000; /* Texto negro */
 }
-.proximas-fechas .fechas-lista li {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+
+.proximas-fechas h2 {
+  text-align: center;
   margin-bottom: 20px;
-}
-.proximas-fechas .fechas-lista li img {
-  width: 40px;
-  margin-right: 20px;
-}
-.proximas-fechas .fechas-lista li p {
-  font-size: 18px;
-  color: white;
+  color: #000; /* Color del título */
 }
 
-.footer-logo {
+.fechas-lista {
+  list-style: none; /* Quitar viñetas */
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.footer-logo img {
-  width: 50px;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre elementos */
+  justify-content: center;
 }
 
-.bannerRegistro {
-  position: relative;
-  background-image: url("../ImagesMascotas/perro4.png");
-  background-size: cover;
-  background-position: center;
-  height: 350px;
-  padding: 20px;
-  color: white;
-  text-align: left;
+.fechas-lista li {
+  display: flex; /* Alineación horizontal de ícono y texto */
+  align-items: center; /* Alinear verticalmente los íconos con el texto */
+  gap: 10px; /* Espacio entre ícono y texto */
+  background: #fff; /* Fondo blanco */
+  padding: 10px;
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  justify-content: center;
 }
-.bannerRegistro h1 {
-  font-size: 2rem;
-  margin: 0px;
+
+.icoMasc {
+  width: 40px;
+  height: 40px;
+  border: 2px solid orange; /* Bordes naranjas */
+  border-radius: 50%; /* Hacer los íconos circulares */
+  object-fit: cover; /* Ajustar imagen */
 }
-.bannerRegistro p {
-  margin-top: 10px;
-  font-size: 1.2rem;
+
+.fechas-lista p {
+  margin: 0;
+  font-size: 1rem; /* Tamaño del texto */
 }
-.bannerRegistro .imgHome {
-  display: none;
+
+.fechas-lista strong {
+  color: #000; /* Color para resaltar los nombres */
 }
 
 .formularioMascota {
@@ -213,28 +380,6 @@ header .logo img, header .user-icon img {
   border: dashed;
 }
 
-.bannerControles {
-  position: relative;
-  background-image: url("../Banners/banner_conejo.png");
-  background-size: cover;
-  background-position: center;
-  height: 350px;
-  padding: 20px;
-  color: white;
-  text-align: left;
-}
-.bannerControles h1 {
-  font-size: 2rem;
-  margin: 0px;
-}
-.bannerControles p {
-  margin-top: 10px;
-  font-size: 1.2rem;
-}
-.bannerControles .imgHome {
-  display: none;
-}
-
 .registro-controles {
   background-color: #d87352;
   padding: 40px;
@@ -294,48 +439,41 @@ header .logo img, header .user-icon img {
   font-size: 18px;
 }
 
-.bannerHistorial {
-  position: relative;
-  background-image: url("../Banners/banner_historial.png");
-  background-size: cover;
-  background-position: center;
-  height: 350px;
+.mascotasHistorial {
   padding: 20px;
-  color: white;
-  text-align: left;
+  background-color: #5a9fd1;
 }
-.bannerHistorial h1 {
-  font-size: 2rem;
-  margin: 0px;
+.mascotasHistorial h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
-.bannerHistorial p {
-  margin-top: 10px;
-  font-size: 1.2rem;
+.mascotasHistorial .mascotaHistorial {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.bannerHistorial .imgHome {
-  display: none;
+.mascotasHistorial .mascotaHistorial img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 3px solid #ccc;
 }
-
-.bannerContacto {
-  position: relative;
-  background-image: url("../Banners/banner_contacto.png");
-  background-size: cover;
-  background-position: center;
-  height: 350px;
-  padding: 20px;
-  color: white;
-  text-align: left;
+.mascotasHistorial .mascotaHistorial .info h3 {
+  margin: 0;
+  color: #444;
+  font-size: 1.5rem;
 }
-.bannerContacto h1 {
-  font-size: 2rem;
-  margin: 0px;
-}
-.bannerContacto p {
-  margin-top: 10px;
-  font-size: 1.2rem;
-}
-.bannerContacto .imgHome {
-  display: none;
+.mascotasHistorial .mascotaHistorial .info p {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 1rem;
 }
 
 .contact-form-section {
@@ -362,13 +500,23 @@ header .logo img, header .user-icon img {
   border-radius: 5px;
 }
 
-.contact-form button {
-  background-color: #d5734c;
-  color: white;
+.contact-form-section button {
+  background-color: #5a9fd1;
+  color: rgb(255, 255, 255);
   padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
+}
+
+.formularioMascota button {
+  background-color: #5a9fd1;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: px;
 }
 
 /* Sección Equipo */
