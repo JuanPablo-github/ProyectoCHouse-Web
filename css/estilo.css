@@ -548,11 +548,6 @@ header .logo img, header .user-icon img {
   margin: 5px 0;
 }
 
-.mascota:hover {
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra */
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -563,30 +558,67 @@ header .logo img, header .user-icon img {
     transform: translateY(0);
   }
 }
-.mascota img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  border: 2px solid orange;
+.mascota,
+.clinica {
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-out;
 }
 
-.mascota p {
+.mascota p,
+.clinica p {
   margin: 0;
   font-size: 1rem;
   font-weight: bold;
   color: #333;
 }
 
-.mascota {
-  background: #d87352;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 15px;
+.mascota:hover,
+.clinica:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.mascota img,
+.clinica img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid orange;
+  margin-bottom: 10px;
+}
+.clinica img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid orange;
+  margin-bottom: 10px;
+}
+
+input:focus {
+  outline: none;
+  border-color: orange;
+  box-shadow: 0 0 8px rgba(255, 165, 0, 0.5);
+}
+
+button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeIn 1s ease-out; /* Animación de entrada */
+}
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=estilo.css.map */
